@@ -1,6 +1,6 @@
 package com.anisimovdenis.hw1.task2;
 
-interface Moveable {
+public interface Moveable {
 
     void move();
 }

@@ -1,6 +1,6 @@
 package com.anisimovdenis.hw1.task2;
 
-interface Stopable {
+public interface Stopable {
 
     void stop();
 }
