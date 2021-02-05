@@ -1,16 +1,21 @@
 package com.anisimovdenis.hw1.task2;
 
-public abstract class Car {
+public abstract class Car implements Moveable {
 
-    public Engine engine;
+    private Engine engine;
     private String color;
     private String name;
 
-    protected void start() {
+    public Car(Engine engine, String color) {
+        this.engine = engine;
+        this.color = color;
+    }
+
+    public void start() {
         System.out.println("Car starting");
     }
 
-    abstract void open();
+    protected abstract void open();
 
     public Engine getEngine() {
         return engine;

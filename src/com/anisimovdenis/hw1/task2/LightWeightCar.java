@@ -1,9 +1,13 @@
 package com.anisimovdenis.hw1.task2;
 
-class LightWeightCar extends Car implements Moveable {
+public class LightWeightCar extends Car {
+
+    public LightWeightCar(Engine engine, String color) {
+        super(engine, color);
+    }
 
     @Override
-    void open() {
+    public void open() {
         System.out.println("Car is open");
     }
 
