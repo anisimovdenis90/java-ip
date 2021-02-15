@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Counter {
 
-    private Lock lock;
+    private final Lock lock;
     private volatile int count;
 
     public Counter() {
@@ -47,7 +47,9 @@ public class Counter {
                 .limit(5)
                 .peek(Thread::start)
                 .collect(Collectors.toList());
-        Thread.sleep(500);
+        for (Thread thread : list) {
+            thread.join();
+        }
         System.out.println(counter.get());
     }
 }
